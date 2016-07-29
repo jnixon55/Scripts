@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "gpcap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }]
+}

@@ -1,0 +1,10 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "lodap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }
+    ]
+}

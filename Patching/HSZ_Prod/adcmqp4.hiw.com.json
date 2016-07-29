@@ -1,0 +1,10 @@
+{
+   "apps":[
+      {
+         "cmdtype": "script",
+         "appuser": "activemq",
+         "stop": "rap stop amq-shared",
+         "start": "rap start amq-shared"
+      }
+    ]
+}

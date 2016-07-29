@@ -1,0 +1,16 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "gemfire",
+         "stop": "stopservice",
+         "start": "startservice"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "gemfire",
+         "stop": "stoplocator",
+         "start": "startlocator"
+      }
+      ]
+}

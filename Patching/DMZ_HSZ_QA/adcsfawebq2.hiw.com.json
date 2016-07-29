@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "javelin",
+         "stop": "rap stop apache",
+         "start": "rap start apache"
+      }]
+}

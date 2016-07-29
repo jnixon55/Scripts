@@ -1,0 +1,22 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "dlqap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "groap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "gsnap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }
+    ]
+}

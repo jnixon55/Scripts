@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "sfa",
+         "stop": "stopserver",
+         "start": "startserver "
+      }]
+}

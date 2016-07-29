@@ -1,0 +1,25 @@
+{
+   "apps":[
+      {
+         "cmdtype":"script",
+         "appuser":"smuser",
+         "stop":"sudo service httpd-ssorest stop",
+         "start":"sudo service httpd-ssorest start"
+      },
+      {
+         "cmdtype":"script",
+         "appuser":"smuser",
+         "stop":"sudo service httpd-im stop",
+         "start":"sudo service httpd-im start"
+      },
+      {
+         "cmdtype":"script",
+         "appuser":"smuser",
+         "stop":"sudo service httpd-login ",
+         "start":"sudo service httpd-login start"
+      }
+   ]
+}
+
+
+*add full paths ie.. /usr/bin/sudo /usr/bin/service..

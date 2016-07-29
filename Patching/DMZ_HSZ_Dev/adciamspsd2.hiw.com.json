@@ -1,0 +1,8 @@
+{
+"apps": [ { "cmdtype": "script",
+        "appuser": "smuser",
+        "stop": "/apps/CA/secure-proxy/proxy-engine/sps-ctl stop",
+        "start": "/apps/CA/secure-proxy/proxy-engine/sps-ctl start"
+        } ,
+        ]
+}

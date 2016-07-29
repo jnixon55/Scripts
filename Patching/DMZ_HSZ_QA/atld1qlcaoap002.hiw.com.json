@@ -1,0 +1,28 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "websphere",
+         "stop": "stopMDM_Client",
+         "start": "startMDM_Client"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "websphere",
+         "stop": "stopMDM_Server",
+         "start": "startMDM_Server"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "websphere",
+         "stop": "stopMDM_Client",
+         "start": "startMDM_Client"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "websphere",
+         "stop": "stopNode",
+         "start": "startNode"
+      }
+    ]
+}

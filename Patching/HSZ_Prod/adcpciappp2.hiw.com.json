@@ -1,0 +1,16 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "parap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "stbap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }
+    ]
+}

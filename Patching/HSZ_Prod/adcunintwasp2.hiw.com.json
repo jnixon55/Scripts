@@ -1,0 +1,16 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "websphere",
+         "stop": "stopSrv",
+         "start": "startSrv"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "websphere",
+         "stop": "stopNode",
+         "start": "startNode"
+      }
+    ]
+}

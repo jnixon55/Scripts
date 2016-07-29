@@ -1,0 +1,8 @@
+{
+"apps": [ { "cmdtype": "script",
+        "appuser": "smuser",
+        "stop": "/apps/tomcat/bin/shutdown.sh",
+        "start": "/apps/tomcat/bin/startup.sh"
+        } ,
+        ]
+}

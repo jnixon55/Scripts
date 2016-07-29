@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "ccpsuser",
+         "stop": "stopapp",
+         "start": "startapp"
+      }]
+}

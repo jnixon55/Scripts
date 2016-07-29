@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "atphcts",
+         "stop": "stopapp",
+         "start": "startapp"
+      }]
+}

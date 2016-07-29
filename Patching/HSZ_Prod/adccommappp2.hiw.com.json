@@ -1,0 +1,41 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "cflap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "comap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "evsap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "gcaap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "mkpap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "rflap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }
+
+    ]
+}

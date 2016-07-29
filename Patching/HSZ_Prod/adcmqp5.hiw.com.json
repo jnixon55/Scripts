@@ -1,0 +1,16 @@
+{
+   "apps":[
+      {
+         "cmdtype": "script",
+         "appuser": "activemq",
+         "stop": "rap stop amq-core",
+         "start": "rap start amq-core"
+      },
+      {
+         "cmdtype": "script",
+         "appuser": "activemq",
+         "stop": "rap stop amq-magic",
+         "start": "rap start amq-magic"
+      }
+    ]
+}

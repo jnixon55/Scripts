@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "script",
+         "appuser": "esbuser",
+         "stop": "sudo service redhat-jboss-fuse stop",
+         "start": "sudo service redhat-jboss-fuse start"
+      }]
+}

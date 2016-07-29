@@ -1,0 +1,16 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "hsn",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "atphcs",
+         "stop": "stopapp",
+         "start": "startapp"
+      }
+    ]
+}

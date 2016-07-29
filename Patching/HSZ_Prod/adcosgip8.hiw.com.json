@@ -1,0 +1,29 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "gcsap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "orsap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "reiap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "staap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }
+
+    ]
+}

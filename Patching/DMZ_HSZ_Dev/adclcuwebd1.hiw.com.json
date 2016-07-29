@@ -1,0 +1,10 @@
+{
+"apps": [ {
+        "cmdtype": "menu",
+        "appuser": "lcusvc",
+        "stop": "rap stop apachep",
+        "start": "rap start apache",
+        "verify": "rap chkprocs"
+        }
+        ]
+}

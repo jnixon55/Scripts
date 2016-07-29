@@ -1,0 +1,83 @@
+Menu () {
+
+ GREEN='\033[0;32m'
+ RED='\033[0;31m'
+ NC='\033[0m' # No Color
+ YELLOW='\033[0;33m'
+
+ echo  "${GREEN}#######################################"
+ echo  "${GREEN}#######    CHECK DISK SPACE     #######"
+ echo  "${GREEN}#######################################\n"
+
+ printf "${YELLOW}Please Enter the Server Name or IP Address:${NC}\n "
+
+ read ServerName
+
+ for HOST in "$ServerName"
+
+  do
+
+ SIZE=$(ssh -o BatchMode=yes -o ConnectTimeout=5 $HOST "uname -n;df -h .;echo -e " | grep -v '^Filesystem' | awk 'NF=6{print $5}NF==5{print $3}{}' | sed 's/%//g')
+
+
+
+ SIZE2=$(echo "$SIZE" | tr '\n' '\000')
+
+  done
+
+  if [ $SIZE -ge 75 ]; then
+
+      printf "${RED}Partition Size on / Is At Or Above Threshold: ${YELLOW}$SIZE2%%\n"
+      echo
+
+  else
+
+      printf "${GREEN}DISK IS BELOW THRESHOLD: ${YELLOW}${SIZE2}%%\n"
+      echo
+
+  fi
+  option
+  break
+}
+
+Menu2 () {
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+YELLOW='\033[0;33m'
+
+echo "${GREEN}#######################################"
+echo "${GREEN}#######     CHECK PROCESSES     #######"
+echo "${GREEN}#######################################\n"
+
+printf "${YELLOW}Please Enter the Server Name or IP Address:${NC}\n "
+
+read ServerName
+
+echo
+
+printf "${YELLOW}Enter Process Name:${NC}\n "
+
+
+read PROC
+
+SIZE=$(ssh -o BatchMode=yes -o ConnectTimeout=5 $ServerName ps cax)
+
+echo
+
+echo "$SIZE" |grep -q $PROC && echo "${GREEN}Process is running"
+echo
+echo "$SIZE" |grep -q $PROC || echo "${RED}Process is not Running!!"
+echo
+option
+break
+}
+
+Clear () {
+
+  clear
+  echo "Terminal Cleared"
+  option
+  break
+}

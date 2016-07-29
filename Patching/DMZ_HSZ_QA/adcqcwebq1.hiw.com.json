@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "qcweb",
+         "stop": "rap stop apache",
+         "start": "rap start apache"
+      }]
+}

@@ -1,0 +1,16 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "perform",
+         "stop": "rap stop apache",
+         "start": "rap start apache"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "sbrp",
+         "stop": "rap stop apache",
+         "start": "rap start apache"
+      }
+    ]
+}

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+  FILE="$1"
+  STANZA="$2"
+
+  cat $FILE | awk -F 'multipath { ' '{
+    if (NF >= 2)
+      if ($1 == "'$STANZA'")
+        pl=1
+      else
+        pl=0
+    if (pl == 0) print $0
+  }' > output

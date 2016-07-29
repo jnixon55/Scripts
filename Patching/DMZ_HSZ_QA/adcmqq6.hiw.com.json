@@ -1,0 +1,17 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "activemq",
+         "stop": "rap stop amq-core",
+         "start": "rap start amq-core"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "activemq",
+         "stop": "rap stop amq-magic",
+         "start": "rap start amq-magic"
+      }
+
+    ]
+}

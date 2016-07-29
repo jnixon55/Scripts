@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "script",
+         "appuser": "crmsoft",
+         "stop": "/apps/psoft/crm/crm89qa/webserv/CRM89QA/bin/startPIA.sh",
+         "start": "/apps/psoft/crm/crm89qa/webserv/CRM89QA/bin/stopPIA.sh"
+      }]
+}

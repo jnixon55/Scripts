@@ -1,0 +1,22 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "iosap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "ordap",
+         "stop": "stopapp",
+         "start": "startapp"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "gsyap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }
+    ]
+}

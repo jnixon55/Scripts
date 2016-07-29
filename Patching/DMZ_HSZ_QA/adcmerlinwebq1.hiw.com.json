@@ -1,0 +1,17 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "travel",
+         "stop": "rap stop apache",
+         "start": "rap start apache"
+      },
+      {
+         "cmdtype": "menu",
+         "appuser": "merlin",
+         "stop": "rap stop apache",
+         "start": "rap start apache"
+      }
+
+    ]
+}

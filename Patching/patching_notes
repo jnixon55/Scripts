@@ -1,0 +1,17 @@
+But here is the basic idea:
+1. "Apps" is an _ordered_ list of steps to start and stop "applications"
+2. Stop order would be in reverse
+3. cmdtype:menu == fixed set of commands, startapp, stopapp, verifyapp
+4. cmdtype:init    == standard system "service" commands
+
+5. cmdtype:script == more of a band-aid or swiss-army-knife (depends upon perspective)
+            This provides ability to execute custom commands
+    a. start+stop+verify to be delinked
+    b. execute the step only if "start" or "stop" specified in given run
+    c. skip verify if not specified
+
+So, potentially, we can have.
+        { "cmdtype": "script", "start": "/local/app/b2b/startme" }
+        { "cmdtype": "script", "start": "sleep 300", "verify":"/local/app/b2b/verify_started" }
+or even,
+       { "cmdtype": "script", "start": "true", "verify":"/local/app/b2b/verify_started" }

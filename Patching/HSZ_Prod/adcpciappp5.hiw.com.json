@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "orpap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }]
+}

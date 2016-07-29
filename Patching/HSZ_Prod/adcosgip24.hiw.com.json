@@ -1,0 +1,9 @@
+{
+   "apps":[
+      {
+         "cmdtype": "menu",
+         "appuser": "rulap",
+         "stop": "stopapp",
+         "start": "startapp"
+      }]
+}

@@ -1,0 +1,70 @@
+We are currently seeing swap warnings on serveral of our servers in our environment. For the most part this is because the swap file
+is fairly small at 1GB and because the monitoring is looking for a percentage used if a server has over 500mb swap it will alert.
+After running 'vmstat 3 100', I confirmed that the app is not "swapping" and that the swap usage is legitimate.
+My suggestion is to add annother 1GB swap file (Making swap 2GB) this should be prevent the monitoring from alerting for swap usage when only
+500mb of swap is being used.
+
+*If you notice that you have serveral GB of swap and you are running out of swap and/or you notice that the app is "swapping", further investigation is needed.
+
+WARNING: Swap Usage 50/75
+
+							total				used			free
+Swap:         1023        560        463
+
+[root@iadd1plcemap002 admin_nixonje]# vmstat 3 100
+procs -----------memory---------- ---swap-- -----io---- --system-- -----cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0 574260 312436 217936 4391412    0    0     1    12    0    1  1  1 98  0  0
+
+ 0  0 574260 312428 217936 4391420    0    0     0     3  245  312  1  0 98  0  0
+ 0  0 574260 312428 217936 4391420    0    0     0     8  200  291  1  0 99  0  0
+ 0  0 574260 312428 217936 4391424    0    0     0    20  172  265  1  0 99  0  0
+ 0  0 574260 312164 217936 4391432    0    0     0     7  311  333  2  1 98  0  0
+ 0  0 574260 312164 217936 4391432    0    0     0     0  257  358  1  1 98  0  0
+
+
+
+
+#You should first find out what is using swap space (Below script credit to Doug Forbush)
+#Finding highest swap
+		for PROCESS in /proc/*/; do
+		 	swapused=$(awk 'BEGIN { total = 0 } /^Swap:[[:blank:]]*[1-9]/ { total = total + $2 } END { print total }' ${PROCESS}/smaps 2>/dev/null || echo 0)
+		   	if [ $swapused -gt 0 ]; then
+		     	/bin/echo -e "${swapused}k\t$(cat ${PROCESS}/cmdline)"
+		   	fi
+		 	done
+
+#Once you find the processes using swap first try and restart that process (if its a java app take heap dump first)
+grep -i swap /proc/meminfo
+
+#Determine if the server is using any swapfiles or swap paritions
+cat /etc/fstab
+
+#If its a swap partition verify the swap logical volume
+lvdisplay | grep swap
+  LV Path                /dev/rootvg/swaplv
+  LV Name                swaplv
+
+#Disable swapping for the associated logical volume:
+swapoff -v  /dev/rootvg/swaplv
+#Resize the LVM logical volume by 256 MB or whatever desired size:
+lvm lvresize  /dev/rootvg/swaplv -L +256M # <-- size you want to add
+#Format the new swap space:
+mkswap  /dev/rootvg/swaplv
+#Enable the extended logical volume:
+swapon -va
+#Test that the logical volume has been extended properly:
+cat /proc/swaps
+
+
+#or you can increase swap by adding a swapfile (in this example you are creating a 8gb swapfile)
+dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+
+#initialize new swapfile
+mkswap /swapfile
+
+#enable swapfile
+swapon /swapfile
+
+#please the followingin fstab to ensure that the OS mounts swap after reboots
+/swapfile1 none swap sw 0 0
