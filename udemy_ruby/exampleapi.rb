@@ -40,4 +40,4 @@ end
 stack_exchange = StackExchange.new('stackoverflow', 1)
 
 # puts stack_exchange.questions
-# puts stack_exchange.users
+puts stack_exchange.users
