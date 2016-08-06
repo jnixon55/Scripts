@@ -167,7 +167,7 @@ echo -e ' \t '"wwid ${wwid}"
 echo -e ' \t '"alias ${alias}"
 echo -e ' \t'"mode 0600"
 echo " } \n"
-done
+done > test.luns
 
 ### Animate .gif
 gifview --animate --new-window root  animated.gif
