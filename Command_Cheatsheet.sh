@@ -78,6 +78,8 @@ Command Cheat Sheet
 
 --	sorted-du () { paste -d '#' <( du -ax "$1" ) <( du -hax "$1" ) | sort -n -k1,7 | cut -d '#' -f 2; }
 
+--	du -ahx / | sort -hr | head -30
+
 		# Then run: sorted-du /
 		#	You get human-readable, sorted output to find big files. substitute / for any filesytem
 
