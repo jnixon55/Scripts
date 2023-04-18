@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "alfresco",
-         "stop": "rap stop apache",
-         "start": "rap start apache"
-      }]
-}

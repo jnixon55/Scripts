@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "iosap",
-         "stop": "stopapp",
-         "start": "startapp"
-      }]
-}

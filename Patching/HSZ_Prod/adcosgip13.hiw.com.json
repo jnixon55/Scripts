@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "gsaap",
-         "stop": "stopapp",
-         "start": "startapp"
-      }]
-}

@@ -1,8 +1,0 @@
-{
-"apps": [ { "cmdtype": "script",
-        "appuser": "resin",
-        "stop": "/local/home/resin/resin-stop.sh",
-        "start": "/local/home/resin/resin-start.sh"
-        } ,
-        ]
-}

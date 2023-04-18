@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "gemfire",
-         "stop": "stoplocator",
-         "start": "startlocator"
-      }]
-}

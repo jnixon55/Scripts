@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "perform",
-         "stop": "rap stop apache",
-         "start": "rap start apache"
-      }]
-}

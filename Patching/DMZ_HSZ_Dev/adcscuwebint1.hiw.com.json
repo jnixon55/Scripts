@@ -1,9 +1,0 @@
-{
-"apps": [ {
-        "cmdtype": "script",
-        "appuser": "loyalsc",
-        "stop": "rap stop apache",
-        "start": "rap start apache"
-        }
-        ]
-}

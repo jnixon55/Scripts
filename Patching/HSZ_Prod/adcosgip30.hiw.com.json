@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "strap",
-         "stop": "stopapp",
-         "start": "startapp"
-      }]
-}

@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "script",
-         "appuser": "sfa",
-         "stop": "/apps/sfa/initiate/IBM/Initiate/Engine9.7.0/scripts/madconfig.sh start_instance",
-         "start": "/apps/sfa/initiate/IBM/Initiate/Engine9.7.0/scripts/madconfig.sh stop_instance"
-      }]
-}

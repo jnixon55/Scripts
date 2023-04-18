@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "eiguser",
-         "stop": "rap stop eig",
-         "start": "rap start eig"
-      }]
-}

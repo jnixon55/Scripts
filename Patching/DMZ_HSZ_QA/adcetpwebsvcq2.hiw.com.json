@@ -1,9 +1,0 @@
-{
-   "apps":[
-      {
-         "cmdtype": "menu",
-         "appuser": "websvs",
-         "stop": "stopapp",
-         "start": "startapp"
-      }]
-}
