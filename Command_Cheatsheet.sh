@@ -5,29 +5,32 @@ Command Cheat Sheet
 		###################################################################
 
 
-		#!/bin/bash
-		SERVERS=(
-		"server1.global"
-		"server6.global"
-		# add more here
-		)
+	#!/bin/bash
+	SERVERS=(
+	"server1.global"
+	"server6.global"
+	)
 
-		SESSION="servers"
-		tmux new-session -d -s $SESSION
+	SESSION="servers"
 
-		for i in "${!SERVERS[@]}"; do
-		if [ $i -eq 0 ]; then
-			tmux send-keys -t $SESSION "ssh ${SERVERS[$i]}" Enter
-		else
-			tmux split-window -t $SESSION
-			tmux send-keys -t $SESSION "ssh ${SERVERS[$i]}" Enter
-		fi
-		done
+	# Prompt once, don't echo the password
+	read -s -p "SSH Password: " SSHPASS
+	echo
+	export SSHPASS
 
-		# Optional: tile panes evenly
-		tmux select-layout -t $SESSION tiled
+	tmux new-session -d -s $SESSION
 
-		tmux attach -t $SESSION
+	for i in "${!SERVERS[@]}"; do
+	if [ $i -eq 0 ]; then
+		tmux send-keys -t $SESSION "export SSHPASS='$SSHPASS' && sshpass -e ssh ${SERVERS[$i]}" Enter
+	else
+		tmux split-window -t $SESSION
+		tmux send-keys -t $SESSION "export SSHPASS='$SSHPASS' && sshpass -e ssh ${SERVERS[$i]}" Enter
+	fi
+	done
+
+	tmux select-layout -t $SESSION tiled
+	tmux attach -t $SESSION
 
 			###############################################
 			###Display date and time in history command ###
